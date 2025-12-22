@@ -11,11 +11,11 @@ export default function About() {
             <p className="text-black text-center text-sm w-5/6 mx-auto mt-3">
 
                 ما یک فضای خلاقانه برای هنرمندان و علاقه به هنر طراحی کردیم تا با حضور شما
-              هر هفته یک کارگاه هنری برگزار کنیم
+                هر هفته یک کارگاه هنری برگزار کنیم
 
             </p>
 
-            <Image alt="logo" width={180} height={180} src={"/images/general/side-pic.png"} className="-mt-5 -ml-5"/>
+            {/* <Image alt="logo" width={180} height={180} src={"/images/general/side-pic.png"} className="-mt-5 -ml-5" /> */}
 
         </div>
     )

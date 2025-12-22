@@ -1,15 +1,18 @@
 import About from "../components/about";
+import Courses from "../components/courses";
 import Header from "../components/header";
 
-export default function HomePage() { 
+export default function HomePage() {
 
     return (
 
-        <div className="h-screen w-screen"> 
+        <div className="h-screen w-screen">
 
-        <Header/>
+            <Header />
 
-        <About/>
+            <About />
+
+            <Courses />
 
         </div>
     )

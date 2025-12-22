@@ -38,3 +38,17 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+#courses {
+  background-image: url(../public//images/general/course.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.course {
+  background-image: url(../public//images/general/bg-1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
