@@ -31,3 +31,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+#about {
+  background-image: url(../public//images/general/bg-1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
