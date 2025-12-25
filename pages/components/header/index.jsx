@@ -1,25 +1,59 @@
-import Image from "next/image";
+// Header.jsx
+import { useState } from "react";
 
 export default function Header() {
 
+    const [open, setOpen] = useState(false);
+
+    const pages = [
+
+        { title: "دوره های ما", url: "/courses", id: 0 },
+        { title: "تماس با ما", url: "/contact", id: 1 },
+        { title: "درباره ما", url: "/about", id: 2 },
+    ];
+
     return (
 
-        <div className="h-1/2 w-full pt-12" id="header">
+        <section id="header" className="w-full h-2/5">
 
-            <header className="w-full h-20 bg-black/50 flex py-6" dir="rtl">
+            <header className="bg-black/50 w-full shadow-md shadow-black">
 
-                <button className="bg-amber-800 border-0 rounded-md w-24 h-full mr-3 text-sm shadow-md shadow-black/35 duration-300 hover:bg-amber-900">
-                    ثبت نام دوره
-                </button>
+                <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
 
-                <button className="text-white h-full text-sm text-center mr-6"> درباره ما </button>
-                <button className="text-white h-full text-sm text-center mr-6">  تماس با ما </button>
-                <button className="text-white h-full text-sm text-center mr-6"> دوره های ما </button>
+                    <div className="text-xl font-bold">
+                        <img src="/images/general/logo.PNG" alt="logo" className="w-10 h-10 md:w-14 md:h-14" />
+                    </div>
 
-                <Image width={40} height={40} alt="logo" src={"/images/general/logo.png"} className="mr-7" />
+                    <button className="text-2xl md:hidden" onClick={() => setOpen(!open)}>
+                        &#9776;
+                    </button>
+
+                    {/* desktop version */}
+                    <nav className="hidden md:flex space-x-6 w-3/4 gap-x-20 pr-20 h-full" dir="rtl">
+
+                        {
+                            pages.map((page) => (
+                                <a href={page?.url} className="text-xl" key={page?.id}> {page?.title} </a>
+                            ))
+                        }
+
+                    </nav>
+
+                </div>
+
+                {/* mobile version */}
+                <div className={`md:hidden shadow-md overflow-hidden transition-all duration-300 ${open ? "max-h-96" : "max-h-0"}`}>
+
+                    {
+                        pages.map((page) => (
+
+                            <a href={page?.url} className="shadow-md shadow-black text-right block px-4 py-2" key={page?.id}> {page?.title} </a>
+                        ))
+                    }
+
+                </div>
 
             </header>
-
-        </div>
-    )
+        </section>
+    );
 }
