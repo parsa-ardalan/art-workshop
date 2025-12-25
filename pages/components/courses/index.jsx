@@ -41,7 +41,7 @@ export default function Courses() {
             <div className="w-full h-full bg-black/30 backdrop-blur-xs">
 
                 <div className="h-1/4 pt-14">
-                    <h1 className="text-white text-xl text-center font-bold text-shadow-sm text-shadow-black"> دوره های این هفته </h1>
+                    <h1 className="text-white text-3xl text-center text-shadow-sm text-shadow-black"> دوره های این هفته </h1>
                 </div>
 
             </div>

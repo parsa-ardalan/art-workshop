@@ -34,7 +34,7 @@ export default function Header() {
 
                         {
                             pages.map((page) => (
-                                <a href={page?.url} className="text-xl" key={page?.id}> {page?.title} </a>
+                                <a href={page?.url} className="text-3xl" key={page?.id}> {page?.title} </a>
                             ))
                         }
 
@@ -48,7 +48,7 @@ export default function Header() {
                     {
                         pages.map((page) => (
 
-                            <a href={page?.url} className="shadow-md shadow-black text-right block px-4 py-2" key={page?.id}> {page?.title} </a>
+                            <a href={page?.url} className="text-lg shadow-md shadow-black text-right block px-4 py-2" key={page?.id}> {page?.title} </a>
                         ))
                     }
 
