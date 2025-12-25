@@ -54,6 +54,10 @@ body {
 }
 
 @font-face {
-  font-family: 'IranNastaliq', serif;
-  src: url('/fonts/IranNastaliq.ttf') format('truetype');
+  font-family: 'IranNastaliq';
+  src: url('/fonts/IranNastaliq.woff2') format('woff2'),
+    url('/fonts/IranNastaliq.woff') format('woff'),
+    url('/fonts/IranNastaliq.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
