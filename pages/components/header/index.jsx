@@ -1,5 +1,6 @@
 // Header.jsx
 import { useState } from "react";
+import Image from "next/image";
 
 export default function Header() {
 
@@ -21,7 +22,7 @@ export default function Header() {
                 <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
 
                     <div className="text-xl font-bold">
-                        <img src="/images/general/logo.PNG" alt="logo" className="w-10 h-10 md:w-14 md:h-14" />
+                        <Image src="/images/general/logo.png" alt="logo" width={40} height={40} className="w-10 h-10 md:w-14 md:h-14" />
                     </div>
 
                     <button className="text-2xl md:hidden" onClick={() => setOpen(!open)}>
@@ -54,7 +55,7 @@ export default function Header() {
                 </div>
 
             </header>
-            
+
         </section>
     );
 }
